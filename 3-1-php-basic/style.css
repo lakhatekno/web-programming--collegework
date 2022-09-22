@@ -1,0 +1,156 @@
+html {
+    scroll-behavior: smooth;
+}
+.jumbotron  {
+    height: 90vh;
+    color: #0d6efd;
+}
+
+.content {
+    height: 70vh;
+}
+
+.jumbotron::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    
+    display: block;
+    background-image: url('https://www.digitalgpoint.com/wp-content/uploads/2020/12/Crypto-Trading.jpg');
+    width: inherit;
+    height: inherit;
+    background-size: cover;
+    
+    -webkit-filter: brightness(.3);
+    -moz-filter: brightness(.3);
+    -o-filter: brightness(.3);
+    -ms-filter: brightness(.3);
+    filter: brightness(.3);
+}
+
+.nav-link {
+    letter-spacing: 3px;
+}
+
+.hover-nav {
+    border : 3px solid transparent;
+}
+
+.hover-nav:hover {
+    border-bottom : 3px solid #0d6efd;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: scale(1.07);
+    transition: .3s;
+}
+
+
+
+.bappebti {
+    height: 3rem;
+}
+
+.bappebti img {
+    height: 3rem;
+    width: auto;
+}
+
+#market::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    
+    display: block;
+    background-image: url('https://www.provise.com/wp-content/uploads/2020/12/AdobeStock_230168061-stock-trading.jpeg');
+    width: inherit;
+    height: inherit;
+    background-size: cover;
+    
+    -webkit-filter: brightness(.3);
+    -moz-filter: brightness(.3);
+    -o-filter: brightness(.3);
+    -ms-filter: brightness(.3);
+    filter: brightness(.3);
+}
+
+.card {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .7);
+}
+
+.cards-market {
+    overflow-y: scroll;
+}
+
+.cards-market::-webkit-scrollbar {
+    display: none;
+}
+
+.img-bg img{
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    filter: brightness(.6);
+}
+
+.icon-market {
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin: 0 auto;
+    margin-top: -25px;
+    width: 60px;
+    height: 60px;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 3px black;
+}
+
+.icon-market-in {
+    border: 6px solid #0d6efd;
+    border-radius: 50%;
+}
+
+#signup {
+    height: fit-content;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .5);
+}
+
+#mentoring::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    
+    display: block;
+    background-image: url('https://www.mindtheproduct.com/wp-content/uploads/2019/10/network-of-people.jpg');
+    width: inherit;
+    height: inherit;
+    background-size: cover;
+    
+    -webkit-filter: brightness(.3);
+    -moz-filter: brightness(.3);
+    -o-filter: brightness(.3);
+    -ms-filter: brightness(.3);
+    filter: brightness(.3);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0px grey;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #0d6efd;
+  }
