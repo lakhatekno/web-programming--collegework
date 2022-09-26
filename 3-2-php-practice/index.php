@@ -1,3 +1,5 @@
+<!-- Muhammad Islakha 123210096 -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +13,6 @@
         .full {
             height: 100vh;
         }
-
         .c-shadow {
             box-shadow: 0 3px 3px rgba(0, 0, 0, .7);
         }
@@ -24,9 +25,10 @@
     </style>
 </head>
 
-<body>
-    <div class="d-flex full justify-content-center align-items-center border ">
-        <form action="home.php" method="POST" class="border login px-3 rounded-3 c-shadow">
+<body class="bg-dark">
+    <div class="d-flex full flex-column justify-content-center align-items-center ">
+        <h1 class="text-white">Sebut Nama</h1>
+        <form action="home.php" method="POST" class="border text-white login px-3 rounded-5 c-shadow">
             <div class="mb-3">
                 <label for="nama" class="form-label mb-0">Nama</label>
                 <input type="text" class="form-control" id="nama" name="nama">
@@ -36,7 +38,7 @@
                 <input type="text" class="form-control" id="nim" name="nim">
             </div>
             <a href="home.php">
-                <button type="submit" class="mt-3 container-fluid btn btn-primary">Masuk</button>
+                <button type="submit" class="mt-3 container-fluid btn text-dark bg-white">Masuk</button>
             </a>
         </form>
     </div>
