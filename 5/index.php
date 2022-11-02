@@ -1,3 +1,9 @@
+<?php
+	session_start();
+	if (empty($_SESSION['username'])) {
+		header("location: login.php?message=belum_login");
+	} 
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +12,9 @@
 <body>
 	<center>
 		<h1>Data Mahasiswa</h1>
-		<br>
+		<br><br>
+		<a href="logout.php">logout</a>
+		<br><br>
 		<a href="tambah.php">Tambah Data</a>
 		<br>
 		<br>
@@ -36,6 +44,7 @@
 			</tr>
 			<?php } ?>
 		</table>
+		<br><br>
 	</center>
 </body>
 </html>

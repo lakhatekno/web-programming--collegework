@@ -1,4 +1,5 @@
 <?php
+    session_start();
 	include 'koneksi.php';
 
 	$nim		= $_POST['nim'];

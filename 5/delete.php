@@ -8,4 +8,7 @@
     if($query) {
         header("location: index.php");
     }
+    else {
+        echo "Hapus data gagal.";
+    }
 ?>
