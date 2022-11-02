@@ -37,7 +37,7 @@
     </header>
     <main class="bg-dark text-light">
         <div class="d-flex flex-column full justify-content-center align-items-center border">
-            <div class="d-flex flex-column justify-content-center align-items-center border px-5 py-5 rounded-5">
+            <div class="d-flex justify-content-center align-items-center border px-5 py-5 rounded-5">
                 <h1 class="text-center">Program Kembalian</h1>
                 <form action="hasil_kembalian.php" method="POST" class="rounded-3 w-75">
                     <div class="mb-3">

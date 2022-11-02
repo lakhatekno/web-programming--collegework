@@ -37,7 +37,7 @@
             </div>
         </nav>
     </header>
-    <main class="bg-dark text-dark">
+    <main class="bg-dark text-dark border">
 
         <div class="full d-flex flex-column justify-content-center align-items-center text-center">
             <div class="d-flex flex-column border bg-white px-3 py-5 rounded-5" style="max-width: 325px;">
