@@ -28,6 +28,10 @@ body {
     min-height: 100vh;
 }
 
+.dark {
+    color: var(--main-bg);
+}
+
 .bg-dark{
     background-color: var(--main-bg);
 }

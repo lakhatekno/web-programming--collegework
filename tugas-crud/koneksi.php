@@ -2,7 +2,7 @@
 	$hostname	= "localhost";
 	$username	= "root";
 	$password	= "";
-	$database	= "tugas-crud";
+	$database	= "tugas_crud";
 
 	$connect	= new mysqli($hostname, $username, $password, $database);
 

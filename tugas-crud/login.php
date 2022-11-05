@@ -22,11 +22,15 @@
                         echo "Login gagal. Username atau password salah";
                     }
                     else if ($_GET['message'] == "logout") {
-                        echo "anda berhasil logout";
+                        echo "anda berhasil log out";
                     }
                     else if ($_GET['message'] == "belum_login") {
                         echo "anda harus login terlebih dahulu!";
-                      } ?>
+                    } 
+                    else if ($_GET['message'] == "success") {
+                        echo '<h6 class="green mb-4 text-center">Register Berhasil! Silahkan Login</h6>';
+                    } 
+                    ?>
                     </h6>
                 <?php
                   }
@@ -37,7 +41,7 @@
                     <input type="submit" value="Login" class="bg-gradient-blue fw-bold white py-2 px-3 bg-dark white rounded-4">
                 </form>
                 <div class="d-flex justify-content-center">
-                    <p class="white">Belum punya akun? <a href="" class="fw-bold" style="text-decoration: none;"><span class="blue">Daftar di sini</span></a></p>
+                    <p class="white">Belum punya akun? <a href="register.php" class="fw-bold" style="text-decoration: none;"><span class="blue">Register</span></a></p>
                 </div>
             </div>
         </div>

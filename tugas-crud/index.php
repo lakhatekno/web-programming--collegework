@@ -18,7 +18,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-dark px-4 py-3">
             <div class="container-fluid d-flex justify-content-space-between">
-                <div class="d-flex">
+                <div class="d-flex align-items-center">
                     <h5 class="white me-3"  href="#">Praktikum IF | 123210096</h5>
                     <a href="index.php"><button class="btn btn-dark bg-gradient-blue rounded-5 px-4 white">Home</button></a>
                 </div>
@@ -33,9 +33,13 @@
                     <p class="white mb-2">Selamat Datang di</p>
                     <h1 class="white mb-4">Praktikum Informatika</h1>
                     <div class="d-flex flex-column f-width">
-                        <div class="d-flex mb-4">
-                            <button class="container-fluid me-3 btn btn-outline-light rounded-5">Lab</button>
-                            <button class="container-fluid ms-3 btn btn-outline-light rounded-5">Waktu Praktikum</button>
+                        <div class="f-width d-flex mb-4">
+                            <a href="lab.php" class="f-width me-3">
+                                <button class="container-fluid btn btn-outline-light rounded-5">Lab</button>
+                            </a>   
+                            <a href="waktu.php" class="f-width ms-3">
+                                <button class="container-fluid btn btn-outline-light rounded-5">Waktu Praktikum</button>
+                            </a> 
                         </div>
                         <a href="jadwal.php">
                             <button class="container-fluid btn btn-outline-light rounded-5">Jadwal Praktikum</button>

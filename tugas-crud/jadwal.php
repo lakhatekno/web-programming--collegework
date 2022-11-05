@@ -26,21 +26,21 @@
                 <div class="d-flex">
                     <h5 class="white me-3"  href="#">Praktikum IF | 123210096</h5>
                     <a href="index.php" class="me-1"><button class="btn btn-dark rounded-5 px-4 white">Home</button></a>
-                    <a href="Lab.php" class="me-1"><button class="btn btn-dark rounded-5 px-4 white">Lab</button></a>
-                    <a href="Waktu.php" class="me-1"><button class="btn btn-dark rounded-5 px-4 white">Waktu</button></a>
+                    <a href="lab.php" class="me-1"><button class="btn btn-dark rounded-5 px-4 white">Lab</button></a>
+                    <a href="waktu.php" class="me-1"><button class="btn btn-dark rounded-5 px-4 white">Waktu</button></a>
                     <button class="btn btn-dark bg-gradient-blue rounded-5 px-4 white">Jadwal</button>
                 </div>
-                <button class="btn btn-outline-danger rounded-5 px-4">Logout</button>
+                <a href="logout.php"><button class="btn btn-outline-danger rounded-5 px-4">Logout</button></a>
             </div>
         </nav>
     </header>
     <main>
         <div class="full bg-gradient-blue">
             <div class="container-fluid py-3">
-                <div class="row">
+                <div class="row px-3">
                     <div class="col-7">
-                        <table class="bg-dark table white rounded-3" style="overflow:hidden;">
-                            <thead class="text-center">
+                        <table class="bg-dark table rounded-4 mx-auto" style="overflow:hidden;">
+                            <thead class="text-center white">
                                 <th>No</th>
                                 <th>MK</th>
                                 <th>Jurusan</th>
@@ -48,28 +48,69 @@
                                 <th>Waktu</th>
                                 <th>Action</th>
                             </thead>
-                            <tbody>
+                            <tbody class="bg-white dark text-center">
                                 <?php
+                                $i = 1;
                                     while ($data = mysqli_fetch_array($query)) {
                                 ?>
-                                        <tr>
-                                            <td><?= $data['id_jadwal']; ?></td>
+                                        <tr >
+                                            <td><?= $i++; ?></td>
                                             <td><?= $data['mk']; ?></td>
                                             <td><?= $data['jurusan']; ?></td>
                                             <td><?= $data['lab']; ?></td>
                                             <td><?php echo "$data[waktu_mulai] - $data[waktu_selesai]"; ?></td>
-                                            <td><a href="edit.php?id=<?php echo $data['id_jadwal']; ?>"><button class="btn btn-outline-success">Edit</button></a></td>
-                                            <td><a href="delete.php?id=<?php echo $data['id_jadwal']; ?>"><button class="btn btn-outline-danger">Delete</button></a></td>
+                                            <td>
+                                                <a href="edit.php?id=<?php echo $data['id_jadwal']; ?>"><button class="btn btn-sm btn-outline-success px-4 rounded-5">Edit</button></a>
+                                                <a href="p-delete.php?id=<?php echo $data['id_jadwal']; ?>"><button class="btn btn-sm btn-outline-danger px-4 rounded-5">Delete</button></a>
+                                            </td>
                                         </tr>
                                 <?php } ?>
                             </tbody>
                         </table>
                     </div>
-                    <div class="col-4">
-                        <form action="p-login.php" method="POST" class="d-flex flex-column mb-4 f-width">
-                            <input name="username" type="text" placeholder="username" class="py-2 px-3 bg-dark white rounded-4 mb-4">
-                            <input name="password" type="password" placeholder="password" class="py-2 px-3 bg-dark white rounded-4 mb-4">
-                            <input type="submit" value="Login" class="bg-gradient-blue fw-bold white py-2 px-3 bg-dark white rounded-4">
+                    <div class="col-5 d-flex flex-column align-items-center bg-dark white px-4 py-5 rounded-4" >
+                        <h1 class="mt-2 mb-4 px-3 py-2 border-bottom">Tambah Jadwal</h1>
+                        <form action="p-tambah.php" method="POST" class="d-flex flex-column mb-4 f-width">
+                            <div class="d-flex justify-content-center align-items-center mb-4">
+                                <input name="mk" type="text" placeholder="Mata kuliah" required class="container-fluid py-2 px-3 bg-dark white border rounded-4">
+                                <div class="d-flex">
+                                    <div class="form-check mx-auto">
+                                        <input name="jurusan" type="radio" value="IF" checked id="if" class="py-2 px-3 bg-dark white rounded-4 me-1">
+                                        <label for="if" class="me-3">IF</label>
+                                        <input name="jurusan" type="radio" value="SI" id="si" class="py-2 px-3 bg-dark white rounded-4 me-1">
+                                        <label for="si">SI</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <select name="lab" class="container-fluid form-select white bg-dark rounded-4" id="lab" required>
+                                    <option value="" selected disabled>Pilih Lab</option>
+                                    <?php 
+                                        $sql_lab = "SELECT * FROM lab";
+                                        $query_lab = mysqli_query($connect, $sql_lab);
+                                        while ($data = mysqli_fetch_array($query_lab)) {
+                                    ?>
+                                        <option value="<?= $data['id_lab'] ?>"><?= $data['lab'] ?></option>
+                                    <?php
+                                        }
+                                    ?>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <select name="waktu" class="container-fluid form-select white bg-dark rounded-4" id="lab" required>
+                                    <option value="" selected disabled>Pilih Waktu</option>
+                                    <?php 
+                                        $sql_waktu = "SELECT * FROM waktu";
+                                        $query_waktu = mysqli_query($connect, $sql_waktu);
+                                        while ($data = mysqli_fetch_array($query_waktu)) {
+                                    ?>
+                                        <option value="<?= $data['id_waktu'] ?>"><?php echo "$data[waktu_mulai] - $data[waktu_selesai]" ?></option>
+                                    <?php
+                                        }
+                                    ?>
+                                </select>
+                            </div>
+                            <input type="submit" value="Tambah" class="f-width bg-gradient-blue fw-bold white py-2 px-3 bg-dark white rounded-4">
                         </form>
                     </div>
                 </div>
@@ -78,18 +119,3 @@
     </main>
 </body>
 </html>
-
-<!--
-        // while ($data = mysqli_fetch_array($query)) {
-		// 	?>
-		// 	<tr>
-		// 		<td><?= $data['id_jadwal']; ?></td>
-		// 		<td><?= $data['mk']; ?></td>
-		// 		<td><?= $data['jurusan']; ?></td>
-		// 		<td><?= $data['lab']; ?></td>
-		// 		<td><?= $data['waktu_mulai']; ?></td>
-		// 		<td><?= $data['waktu_selesai']; ?></td>
-		// 		<td><a href="edit.php?id=<?php echo $data['id_jadwal']; ?>"><button>Edit</button></a></td>
-		// 		<td><a href="delete.php?id=<?php echo $data['id_jadwal']; ?>"><button>Delete</button></a></td>
-		// 	</tr>
-		//  -->
