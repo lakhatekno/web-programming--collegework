@@ -8,6 +8,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+*::-webkit-scrollbar {
+    display: none;
+}
+
 :root {
     --main-bg   : #1F1F3D;
     --red       : #ED7B84;
@@ -37,6 +41,11 @@ body {
     min-height: 100vh;
 }
 
+.full-nav {
+    width: 100%;
+    min-height: 100vh;
+}
+
 .f-width {
     width: 100%;
 }
@@ -47,6 +56,10 @@ body {
 
 .box-sm {
     width: 400px;
+}
+
+.box-md {
+    width: 650px;
 }
 
 
@@ -75,6 +88,15 @@ body {
     background-color: var(--blue);
 }
 
+.hover-lav :hover {
+    color: var(--lavender);
+    transition: .5s;
+}
+
 input::placeholder {
     color: rgba(255, 255, 255, 0.8);
+}
+
+input {
+    border: none;
 }
