@@ -2,7 +2,7 @@
 	$hostname	= "localhost";
 	$username	= "root";
 	$password	= "";
-	$database	= "tugas_crud";
+	$database	= "pw_jadwal";
 
 	$connect	= new mysqli($hostname, $username, $password, $database);
 

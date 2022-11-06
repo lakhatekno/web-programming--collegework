@@ -22,13 +22,13 @@
                     <h5 class="white me-3"  href="#">Praktikum IF | 123210096</h5>
                     <a href="index.php"><button class="btn btn-dark bg-gradient-blue rounded-5 px-4 white">Home</button></a>
                 </div>
-                <button class="btn btn-outline-danger rounded-5 px-4">Logout</button>
+                <a href="logout.php"><button class="btn btn-outline-danger rounded-5 px-4">Logout</button></a>
             </div>
         </nav>
     </header>
     <main>
-        <div class="full bg-gradient-blue d-flex align-center">
-            <div class="container-fluid box-md d-flex align-items-center justify-content-center py-1 px-0">
+        <div class="full bg-gradient-blue">
+            <div class="box-md container d-flex align-items-center justify-content-center px-3 py-3">
                 <div class="f-width px-4 py-5 bg-dark d-flex flex-column align-items-center rounded-5">
                     <p class="white mb-2">Selamat Datang di</p>
                     <h1 class="white mb-4">Praktikum Informatika</h1>

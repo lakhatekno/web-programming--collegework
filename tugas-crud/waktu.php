@@ -26,7 +26,7 @@
                 <div class="d-flex">
                     <h5 class="white me-3"  href="#">Praktikum IF | 123210096</h5>
                     <a href="index.php" class="me-1"><button class="btn btn-dark rounded-5 px-4 white">Home</button></a>
-                    <a href="lab.php" class="me-1"></a><button class="btn btn-dark rounded-5 px-4 white">Lab</button>
+                    <a href="lab.php" class="me-1"><button class="btn btn-dark rounded-5 px-4 white">Lab</button></a>
                     <button class="btn btn-dark bg-gradient-blue rounded-5 px-4 white me-1">Waktu</button>
                     <a href="jadwal.php"><button class="btn btn-dark rounded-5 px-4 white">Jadwal</button></a>
                 </div>
@@ -62,14 +62,14 @@
                         </table>
                     </div>
                     <div class="col-5 d-flex flex-column align-items-center bg-dark white px-4 py-5 rounded-4" >
-                        <h1 class="mt-2 mb-4 px-3 py-2 border-bottom">Tambah Jam</h1>
+                        <h1 class="mt-2 mb-4 px-3 py-2 border-bottom">Tambah Jam Praktikum</h1>
                         <form action="p-tambah-waktu.php" method="POST" class="d-flex flex-column mb-4 f-width">
-                            <div class="f-width d-flex justify-content-center align-items-center mb-4">
-                                <div class="d-flex flex-column">
+                            <div class="row d-flex justify-content-center align-items-center mb-4">
+                                <div class="col d-flex flex-column">
                                     <label for="mulai" class="mb-1">Mulai</label>
                                     <input name="mulai" type="time" placeholder="--:--" required class="container-fluid py-2 px-3 bg-dark white border rounded-4 me-1">
                                 </div>
-                                <div class="d-flex flex-column">
+                                <div class="col d-flex flex-column">
                                     <label for="selesai" class="mb-1">Selesai</label>
                                     <input name="selesai" type="time" placeholder="--:--" required class="container-fluid py-2 px-3 bg-dark white border rounded-4 ms-1">
                                 </div>

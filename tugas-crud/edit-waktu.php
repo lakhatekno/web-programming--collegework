@@ -7,7 +7,7 @@
     include 'koneksi.php';
 
     $id = $_GET['id'];
-    $sql = "SELECT * FROM lab";
+    $sql = "SELECT * FROM waktu WHERE id_waktu='$id'";
     $query	= mysqli_query($connect, $sql);
     $prev = mysqli_fetch_array($query);
 ?>
@@ -40,11 +40,18 @@
         <div class="full bg-gradient-blue">
             <div class="box-md container d-flex align-items-center justify-content-center px-3 py-3">
                 <div class="f-width d-flex flex-column align-items-center bg-dark white px-4 py-5 rounded-4" >
-                    <h1 class="mt-2 mb-4 px-3 py-2 border-bottom">Ubah Lab</h1>
-                    <form action="p-edit-lab.php" method="POST" class="d-flex flex-column mb-4 f-width">
-                        <input type="text" name="id_lab" value="<?= $prev['id_lab'] ?>" hidden>
-                        <div class="d-flex justify-content-center align-items-center mb-4">
-                            <input name="lab" type="text" placeholder="Mata kuliah" value="<?= $prev['lab'] ?>" required class="container-fluid py-2 px-3 bg-dark white border rounded-4">
+                    <h1 class="mt-2 mb-4 px-3 py-2 border-bottom">Ubah Jam Praktikum</h1>
+                    <form action="p-edit-waktu.php" method="POST" class="d-flex flex-column mb-4 f-width">
+                        <div class="row d-flex justify-content-center align-items-center mb-4">
+                            <input name="id" type="text" value="<?= $prev['id_waktu'] ?>" hidden>
+                            <div class="col d-flex flex-column">
+                                <label for="mulai" class="mb-1">Mulai</label>
+                                <input name="mulai" type="time" value="<?= $prev['waktu_mulai'] ?>" required class="container-fluid py-2 px-3 bg-dark white border rounded-4 me-1">
+                            </div>
+                            <div class="col d-flex flex-column">
+                                <label for="selesai" class="mb-1">Selesai</label>
+                                <input name="selesai" type="time" value="<?= $prev['waktu_selesai'] ?>" required class="container-fluid py-2 px-3 bg-dark white border rounded-4 ms-1">
+                            </div>
                         </div>
                         <input type="submit" value="Edit" class="f-width bg-gradient-blue fw-bold white py-2 px-3 bg-dark white rounded-4">
                     </form>

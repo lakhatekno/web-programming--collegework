@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
+    <title>Register</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
   </head>
@@ -15,16 +15,17 @@
                     Register
                 </h1>
                 <form action="p-tambah-user.php" method="POST" class="d-flex flex-column mb-4 f-width">
-                    <input name="username" type="text" placeholder="username" class="py-2 px-3 bg-dark white rounded-4 mb-4">
-                    <input name="password1" type="password" placeholder="password" class="py-2 px-3 bg-dark white rounded-4 mb-4">
-                    <input name="password2" type="password" placeholder="password" class="py-2 px-3 bg-dark white rounded-4 mb-4">
                     <?php
                     if (isset($_GET['pass'])) {
-                        if ($_GET('pass') == "diff") {
-                            echo '<h6 class="red mb-4 text-center">Password Tidak Sama!</h6>';
+                        if ($_GET['pass'] == 'diff') {
+                            echo '<h6 class="red mb-1 text-center">Password Tidak Sama!</h6>';
+                            echo '<h6 class="red mb-4 text-center">Silahkan Ulangi</h6>';
                         }
                     }
                     ?>
+                    <input name="username" type="text" placeholder="username" class="py-2 px-3 bg-dark white rounded-4 mb-4">
+                    <input name="password1" type="password" placeholder="password" class="py-2 px-3 bg-dark white rounded-4 mb-4">
+                    <input name="password2" type="password" placeholder="password" class="py-2 px-3 bg-dark white rounded-4 mb-4">
                     <input type="submit" value="Register" class="bg-gradient-blue fw-bold white py-2 px-3 bg-dark white rounded-4">
                 </form>
                 <div class="d-flex justify-content-center">

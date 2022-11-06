@@ -5,7 +5,7 @@
 	$pass1	= $_POST['password1'];
 	$pass2	    = $_POST['password2'];
     if ($pass1 !== $pass2) {
-        header("location: register.php?message=diff");
+        header("location: register.php?pass=diff");
         return;
     }
 
