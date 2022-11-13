@@ -39,7 +39,7 @@
             <div class="container-fluid py-3">
                 <div class="row px-3">
                     <div class="col-7">
-                        <table class="bg-dark table rounded-4 mx-auto" style="overflow:hidden;">
+                        <table class="bg-dark table rounded-4 mx-auto">
                             <thead class="text-center white">
                                 <th>ID</th>
                                 <th>Waktu</th>

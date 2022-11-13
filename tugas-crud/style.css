@@ -28,6 +28,10 @@ body {
     min-height: 100vh;
 }
 
+table {
+    overflow: hidden;
+}
+
 .dark {
     color: var(--main-bg);
 }
