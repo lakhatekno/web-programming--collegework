@@ -1,0 +1,12 @@
+Samsung
+Galaxy S22+ 5G
+21.000.000
+green
+
+CHIPSET : Qualcomm SM8450 Snapdragon 8 Gen 1 (4 nm)
+MEMORY : 256GB / 8GB RAM.
+DISPLAY : 6.7 inches 1440 x 3216 pixels, LTPO2 AMOLED, 1B colors, 120Hz, HDR10+, BT.2020, 1300 nits.
+CAMERA : 50 MP, f/1.7, 25mm (wide), 13 MP, f/2.4, 52mm (telephoto), 50 MP, f/2.2, 15mm, 110˚ (ultrawide).
+BATTERY : Li-Po 5000 mAh, non-removable.
+
+https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s22-plus-5g-2.jpg

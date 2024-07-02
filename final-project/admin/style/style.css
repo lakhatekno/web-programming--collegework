@@ -1,0 +1,179 @@
+.white {
+    color: #FFFFFA;
+}
+
+.dark {
+    color: #000103;
+}
+.bg-dark {
+    background-color: #000103;
+    color: #FFFFFA;
+}
+
+.red {
+    color: rgb(255, 49, 46);
+}
+.bg-red {
+    background-color: #FF312E;
+    color: #000103;
+}
+
+.hover-red :hover {
+    color: #FF312E;
+    transition: .175s;
+}
+
+.green {
+    color: #56A3A6;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.w-320 {
+    width: 500px;
+}
+
+.pointer :hover {
+    cursor: pointer;
+}
+
+/* product card */
+.ccard {
+    width: 170px;
+    height: 265px;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 3px rgb(76, 76, 76);
+    overflow: hidden;
+}
+
+.ccard-head {
+    width: 170px;
+    height: 190px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ccard-img-wrapper {
+    width: 170px;
+    height: 190px;
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+}
+
+.ccard img {
+    max-width: 140px;
+    max-height: 180px;
+}
+
+.ccard-action {
+    width: 100%;
+    position: absolute;
+    bottom: -50px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 20px;
+    background-color: #000103;
+}
+
+.beli {
+    font-size: 14px;
+}
+
+.ccard-img-wrapper:hover ~ .ccard-action {
+    bottom: 0px;
+    transition: .3s;
+}
+
+.ccard-action:hover {
+    bottom: 0;
+}
+
+.ccard-text {
+    padding: 0px 20px;
+}
+
+.phone-model {
+    font-size: 20px;
+    font-weight: 600;
+}
+.price {
+    color: #2e2e2e;
+}
+
+/* end card */
+
+.btn-outline-red {
+    border: 1px solid #FF312E;
+    color: #FF312E;
+    background-color: transparent;
+}
+.btn-outline-red:hover {
+    background-color: #FF312E;
+    color: #FFFFFA;
+    transition: .3s;
+}
+.btn-ored-active {
+    background-color: #FF312E;
+    color: white;
+}
+.btn-outline-red-active:hover {
+    border: 1px solid #FF312E;
+    color: #FF312E;
+    background-color: transparent;
+}
+
+.btn-red {
+    display: flex;
+    justify-content: center;
+    background-color: #FF312E;
+    color: #FFFFFA;
+    font-size: 16px;
+    border: 0;
+    padding: 10px 30px;
+}
+.btn-red:hover {
+    transform: scale(1.03);
+    background-color: #FF312E;
+    color: #FFFFFA;
+    transition: .3s;
+}
+
+
+
+
+
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    color: black;
+}
+
+
+html, body{
+    height: 100%;
+}
+
+.global-container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: azure;
+}
+
+.login-form{
+    width: 380px;
+    height: 400px;
+    padding: 20px;
+    background-color: #222d32 !important;
+}
